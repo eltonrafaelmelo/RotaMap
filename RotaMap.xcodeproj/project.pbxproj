@@ -14,6 +14,7 @@
 		B103DF961CAF4D4D007AE21C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B103DF941CAF4D4D007AE21C /* LaunchScreen.storyboard */; };
 		B103DFA11CAF4D4D007AE21C /* RotaMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103DFA01CAF4D4D007AE21C /* RotaMapTests.swift */; };
 		B103DFAC1CAF4D4D007AE21C /* RotaMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103DFAB1CAF4D4D007AE21C /* RotaMapUITests.swift */; };
+		B13246791CB039D900440DF4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B13246781CB039D900440DF4 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		B103DF881CAF4D4D007AE21C /* RotaMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RotaMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B103DF8B1CAF4D4D007AE21C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B103DF8D1CAF4D4D007AE21C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B103DF8D1CAF4D4D007AE21C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		B103DF901CAF4D4D007AE21C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B103DF921CAF4D4D007AE21C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B103DF951CAF4D4D007AE21C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		B103DFA71CAF4D4D007AE21C /* RotaMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RotaMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B103DFAB1CAF4D4D007AE21C /* RotaMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotaMapUITests.swift; sourceTree = "<group>"; };
 		B103DFAD1CAF4D4D007AE21C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B13246781CB039D900440DF4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B13246791CB039D900440DF4 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		B103DF7F1CAF4D4C007AE21C = {
 			isa = PBXGroup;
 			children = (
+				B13246781CB039D900440DF4 /* MapKit.framework */,
 				B103DF8A1CAF4D4D007AE21C /* RotaMap */,
 				B103DF9F1CAF4D4D007AE21C /* RotaMapTests */,
 				B103DFAA1CAF4D4D007AE21C /* RotaMapUITests */,
@@ -97,11 +101,16 @@
 		B103DF8A1CAF4D4D007AE21C /* RotaMap */ = {
 			isa = PBXGroup;
 			children = (
+				B132468C1CB03E7300440DF4 /* Cells */,
+				B132468D1CB03E7300440DF4 /* Constantes */,
+				B132468E1CB03E7300440DF4 /* Models */,
+				B132468F1CB03E7300440DF4 /* Storyboard */,
+				B13246901CB03E7300440DF4 /* TableViews */,
+				B13246911CB03E7300440DF4 /* Utils */,
+				B13246921CB03E7300440DF4 /* ViewControlles */,
+				B13246931CB03E7300440DF4 /* WS */,
 				B103DF8B1CAF4D4D007AE21C /* AppDelegate.swift */,
-				B103DF8D1CAF4D4D007AE21C /* ViewController.swift */,
-				B103DF8F1CAF4D4D007AE21C /* Main.storyboard */,
 				B103DF921CAF4D4D007AE21C /* Assets.xcassets */,
-				B103DF941CAF4D4D007AE21C /* LaunchScreen.storyboard */,
 				B103DF971CAF4D4D007AE21C /* Info.plist */,
 			);
 			path = RotaMap;
@@ -123,6 +132,65 @@
 				B103DFAD1CAF4D4D007AE21C /* Info.plist */,
 			);
 			path = RotaMapUITests;
+			sourceTree = "<group>";
+		};
+		B132468C1CB03E7300440DF4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B132468D1CB03E7300440DF4 /* Constantes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constantes;
+			sourceTree = "<group>";
+		};
+		B132468E1CB03E7300440DF4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B132468F1CB03E7300440DF4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B103DF8F1CAF4D4D007AE21C /* Main.storyboard */,
+				B103DF941CAF4D4D007AE21C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B13246901CB03E7300440DF4 /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		B13246911CB03E7300440DF4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B13246921CB03E7300440DF4 /* ViewControlles */ = {
+			isa = PBXGroup;
+			children = (
+				B103DF8D1CAF4D4D007AE21C /* ViewController.swift */,
+			);
+			path = ViewControlles;
+			sourceTree = "<group>";
+		};
+		B13246931CB03E7300440DF4 /* WS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +261,11 @@
 				TargetAttributes = {
 					B103DF871CAF4D4D007AE21C = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B103DF9B1CAF4D4D007AE21C = {
 						CreatedOnToolsVersion = 7.3;
@@ -299,6 +372,7 @@
 				B103DF901CAF4D4D007AE21C /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B103DF941CAF4D4D007AE21C /* LaunchScreen.storyboard */ = {
@@ -307,6 +381,7 @@
 				B103DF951CAF4D4D007AE21C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -399,10 +474,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RotaMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.RotaMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -410,10 +487,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RotaMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.RotaMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -482,6 +561,7 @@
 				B103DFB21CAF4D4D007AE21C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B103DFB31CAF4D4D007AE21C /* Build configuration list for PBXNativeTarget "RotaMapTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +570,7 @@
 				B103DFB51CAF4D4D007AE21C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B103DFB61CAF4D4D007AE21C /* Build configuration list for PBXNativeTarget "RotaMapUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +579,7 @@
 				B103DFB81CAF4D4D007AE21C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
