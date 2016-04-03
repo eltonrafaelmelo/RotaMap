@@ -1,587 +1,1265 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		B103DF8C1CAF4D4D007AE21C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103DF8B1CAF4D4D007AE21C /* AppDelegate.swift */; };
-		B103DF8E1CAF4D4D007AE21C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103DF8D1CAF4D4D007AE21C /* ViewController.swift */; };
-		B103DF911CAF4D4D007AE21C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B103DF8F1CAF4D4D007AE21C /* Main.storyboard */; };
-		B103DF931CAF4D4D007AE21C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B103DF921CAF4D4D007AE21C /* Assets.xcassets */; };
-		B103DF961CAF4D4D007AE21C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B103DF941CAF4D4D007AE21C /* LaunchScreen.storyboard */; };
-		B103DFA11CAF4D4D007AE21C /* RotaMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103DFA01CAF4D4D007AE21C /* RotaMapTests.swift */; };
-		B103DFAC1CAF4D4D007AE21C /* RotaMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103DFAB1CAF4D4D007AE21C /* RotaMapUITests.swift */; };
-		B13246791CB039D900440DF4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B13246781CB039D900440DF4 /* MapKit.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B103DF9D1CAF4D4D007AE21C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B103DF801CAF4D4C007AE21C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B103DF871CAF4D4D007AE21C;
-			remoteInfo = RotaMap;
-		};
-		B103DFA81CAF4D4D007AE21C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B103DF801CAF4D4C007AE21C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B103DF871CAF4D4D007AE21C;
-			remoteInfo = RotaMap;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		B103DF881CAF4D4D007AE21C /* RotaMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RotaMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B103DF8B1CAF4D4D007AE21C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B103DF8D1CAF4D4D007AE21C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
-		B103DF901CAF4D4D007AE21C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B103DF921CAF4D4D007AE21C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B103DF951CAF4D4D007AE21C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B103DF971CAF4D4D007AE21C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B103DF9C1CAF4D4D007AE21C /* RotaMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RotaMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B103DFA01CAF4D4D007AE21C /* RotaMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotaMapTests.swift; sourceTree = "<group>"; };
-		B103DFA21CAF4D4D007AE21C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B103DFA71CAF4D4D007AE21C /* RotaMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RotaMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B103DFAB1CAF4D4D007AE21C /* RotaMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotaMapUITests.swift; sourceTree = "<group>"; };
-		B103DFAD1CAF4D4D007AE21C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B13246781CB039D900440DF4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		B103DF851CAF4D4D007AE21C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B13246791CB039D900440DF4 /* MapKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B103DF991CAF4D4D007AE21C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B103DFA41CAF4D4D007AE21C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		B103DF7F1CAF4D4C007AE21C = {
-			isa = PBXGroup;
-			children = (
-				B13246781CB039D900440DF4 /* MapKit.framework */,
-				B103DF8A1CAF4D4D007AE21C /* RotaMap */,
-				B103DF9F1CAF4D4D007AE21C /* RotaMapTests */,
-				B103DFAA1CAF4D4D007AE21C /* RotaMapUITests */,
-				B103DF891CAF4D4D007AE21C /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		B103DF891CAF4D4D007AE21C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B103DF881CAF4D4D007AE21C /* RotaMap.app */,
-				B103DF9C1CAF4D4D007AE21C /* RotaMapTests.xctest */,
-				B103DFA71CAF4D4D007AE21C /* RotaMapUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B103DF8A1CAF4D4D007AE21C /* RotaMap */ = {
-			isa = PBXGroup;
-			children = (
-				B132468C1CB03E7300440DF4 /* Cells */,
-				B132468D1CB03E7300440DF4 /* Constantes */,
-				B132468E1CB03E7300440DF4 /* Models */,
-				B132468F1CB03E7300440DF4 /* Storyboard */,
-				B13246901CB03E7300440DF4 /* TableViews */,
-				B13246911CB03E7300440DF4 /* Utils */,
-				B13246921CB03E7300440DF4 /* ViewControlles */,
-				B13246931CB03E7300440DF4 /* WS */,
-				B103DF8B1CAF4D4D007AE21C /* AppDelegate.swift */,
-				B103DF921CAF4D4D007AE21C /* Assets.xcassets */,
-				B103DF971CAF4D4D007AE21C /* Info.plist */,
-			);
-			path = RotaMap;
-			sourceTree = "<group>";
-		};
-		B103DF9F1CAF4D4D007AE21C /* RotaMapTests */ = {
-			isa = PBXGroup;
-			children = (
-				B103DFA01CAF4D4D007AE21C /* RotaMapTests.swift */,
-				B103DFA21CAF4D4D007AE21C /* Info.plist */,
-			);
-			path = RotaMapTests;
-			sourceTree = "<group>";
-		};
-		B103DFAA1CAF4D4D007AE21C /* RotaMapUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B103DFAB1CAF4D4D007AE21C /* RotaMapUITests.swift */,
-				B103DFAD1CAF4D4D007AE21C /* Info.plist */,
-			);
-			path = RotaMapUITests;
-			sourceTree = "<group>";
-		};
-		B132468C1CB03E7300440DF4 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		B132468D1CB03E7300440DF4 /* Constantes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constantes;
-			sourceTree = "<group>";
-		};
-		B132468E1CB03E7300440DF4 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		B132468F1CB03E7300440DF4 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				B103DF8F1CAF4D4D007AE21C /* Main.storyboard */,
-				B103DF941CAF4D4D007AE21C /* LaunchScreen.storyboard */,
-			);
-			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		B13246901CB03E7300440DF4 /* TableViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TableViews;
-			sourceTree = "<group>";
-		};
-		B13246911CB03E7300440DF4 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		B13246921CB03E7300440DF4 /* ViewControlles */ = {
-			isa = PBXGroup;
-			children = (
-				B103DF8D1CAF4D4D007AE21C /* ViewController.swift */,
-			);
-			path = ViewControlles;
-			sourceTree = "<group>";
-		};
-		B13246931CB03E7300440DF4 /* WS */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = WS;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		B103DF871CAF4D4D007AE21C /* RotaMap */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B103DFB01CAF4D4D007AE21C /* Build configuration list for PBXNativeTarget "RotaMap" */;
-			buildPhases = (
-				B103DF841CAF4D4D007AE21C /* Sources */,
-				B103DF851CAF4D4D007AE21C /* Frameworks */,
-				B103DF861CAF4D4D007AE21C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = RotaMap;
-			productName = RotaMap;
-			productReference = B103DF881CAF4D4D007AE21C /* RotaMap.app */;
-			productType = "com.apple.product-type.application";
-		};
-		B103DF9B1CAF4D4D007AE21C /* RotaMapTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B103DFB31CAF4D4D007AE21C /* Build configuration list for PBXNativeTarget "RotaMapTests" */;
-			buildPhases = (
-				B103DF981CAF4D4D007AE21C /* Sources */,
-				B103DF991CAF4D4D007AE21C /* Frameworks */,
-				B103DF9A1CAF4D4D007AE21C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B103DF9E1CAF4D4D007AE21C /* PBXTargetDependency */,
-			);
-			name = RotaMapTests;
-			productName = RotaMapTests;
-			productReference = B103DF9C1CAF4D4D007AE21C /* RotaMapTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B103DFA61CAF4D4D007AE21C /* RotaMapUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B103DFB61CAF4D4D007AE21C /* Build configuration list for PBXNativeTarget "RotaMapUITests" */;
-			buildPhases = (
-				B103DFA31CAF4D4D007AE21C /* Sources */,
-				B103DFA41CAF4D4D007AE21C /* Frameworks */,
-				B103DFA51CAF4D4D007AE21C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B103DFA91CAF4D4D007AE21C /* PBXTargetDependency */,
-			);
-			name = RotaMapUITests;
-			productName = RotaMapUITests;
-			productReference = B103DFA71CAF4D4D007AE21C /* RotaMapUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		B103DF801CAF4D4C007AE21C /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "Elton Melo";
-				TargetAttributes = {
-					B103DF871CAF4D4D007AE21C = {
-						CreatedOnToolsVersion = 7.3;
-						SystemCapabilities = {
-							com.apple.Maps.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-					B103DF9B1CAF4D4D007AE21C = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = B103DF871CAF4D4D007AE21C;
-					};
-					B103DFA61CAF4D4D007AE21C = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = B103DF871CAF4D4D007AE21C;
-					};
-				};
-			};
-			buildConfigurationList = B103DF831CAF4D4C007AE21C /* Build configuration list for PBXProject "RotaMap" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = B103DF7F1CAF4D4C007AE21C;
-			productRefGroup = B103DF891CAF4D4D007AE21C /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				B103DF871CAF4D4D007AE21C /* RotaMap */,
-				B103DF9B1CAF4D4D007AE21C /* RotaMapTests */,
-				B103DFA61CAF4D4D007AE21C /* RotaMapUITests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		B103DF861CAF4D4D007AE21C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B103DF961CAF4D4D007AE21C /* LaunchScreen.storyboard in Resources */,
-				B103DF931CAF4D4D007AE21C /* Assets.xcassets in Resources */,
-				B103DF911CAF4D4D007AE21C /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B103DF9A1CAF4D4D007AE21C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B103DFA51CAF4D4D007AE21C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		B103DF841CAF4D4D007AE21C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B103DF8E1CAF4D4D007AE21C /* ViewController.swift in Sources */,
-				B103DF8C1CAF4D4D007AE21C /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B103DF981CAF4D4D007AE21C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B103DFA11CAF4D4D007AE21C /* RotaMapTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B103DFA31CAF4D4D007AE21C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B103DFAC1CAF4D4D007AE21C /* RotaMapUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B103DF9E1CAF4D4D007AE21C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B103DF871CAF4D4D007AE21C /* RotaMap */;
-			targetProxy = B103DF9D1CAF4D4D007AE21C /* PBXContainerItemProxy */;
-		};
-		B103DFA91CAF4D4D007AE21C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B103DF871CAF4D4D007AE21C /* RotaMap */;
-			targetProxy = B103DFA81CAF4D4D007AE21C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		B103DF8F1CAF4D4D007AE21C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B103DF901CAF4D4D007AE21C /* Base */,
-			);
-			name = Main.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		B103DF941CAF4D4D007AE21C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B103DF951CAF4D4D007AE21C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		B103DFAE1CAF4D4D007AE21C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		B103DFAF1CAF4D4D007AE21C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B103DFB11CAF4D4D007AE21C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = RotaMap/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.br.RotaMap;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B103DFB21CAF4D4D007AE21C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = RotaMap/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.br.RotaMap;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		B103DFB41CAF4D4D007AE21C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RotaMapTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.br.RotaMapTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RotaMap.app/RotaMap";
-			};
-			name = Debug;
-		};
-		B103DFB51CAF4D4D007AE21C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RotaMapTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.br.RotaMapTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RotaMap.app/RotaMap";
-			};
-			name = Release;
-		};
-		B103DFB71CAF4D4D007AE21C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = RotaMapUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.br.RotaMapUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = RotaMap;
-			};
-			name = Debug;
-		};
-		B103DFB81CAF4D4D007AE21C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = RotaMapUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.br.RotaMapUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = RotaMap;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		B103DF831CAF4D4C007AE21C /* Build configuration list for PBXProject "RotaMap" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B103DFAE1CAF4D4D007AE21C /* Debug */,
-				B103DFAF1CAF4D4D007AE21C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B103DFB01CAF4D4D007AE21C /* Build configuration list for PBXNativeTarget "RotaMap" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B103DFB11CAF4D4D007AE21C /* Debug */,
-				B103DFB21CAF4D4D007AE21C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B103DFB31CAF4D4D007AE21C /* Build configuration list for PBXNativeTarget "RotaMapTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B103DFB41CAF4D4D007AE21C /* Debug */,
-				B103DFB51CAF4D4D007AE21C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B103DFB61CAF4D4D007AE21C /* Build configuration list for PBXNativeTarget "RotaMapUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B103DFB71CAF4D4D007AE21C /* Debug */,
-				B103DFB81CAF4D4D007AE21C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = B103DF801CAF4D4C007AE21C /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>1F7C2DF5AB0D61DCA2A37AAC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-RotaMap.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-RotaMap/Pods-RotaMap.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2222CB20D22DF3BD2AA49AB4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5C888123B79ACF7C7E6210A8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4E6C27A083302AB00EB1FA10</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1F7C2DF5AB0D61DCA2A37AAC</string>
+				<string>9D74F880DD2B504BF7C8EC19</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5C888123B79ACF7C7E6210A8</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_RotaMap.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>86F20A726FC37796611C1EA4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-RotaMap/Pods-RotaMap-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>9D74F880DD2B504BF7C8EC19</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-RotaMap.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-RotaMap/Pods-RotaMap.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DF7F1CAF4D4C007AE21C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B13246781CB039D900440DF4</string>
+				<string>B103DF8A1CAF4D4D007AE21C</string>
+				<string>B103DF9F1CAF4D4D007AE21C</string>
+				<string>B103DFAA1CAF4D4D007AE21C</string>
+				<string>B103DF891CAF4D4D007AE21C</string>
+				<string>4E6C27A083302AB00EB1FA10</string>
+				<string>2222CB20D22DF3BD2AA49AB4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DF801CAF4D4C007AE21C</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0730</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Elton Melo</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>B103DF871CAF4D4D007AE21C</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>SystemCapabilities</key>
+						<dict>
+							<key>com.apple.Maps.iOS</key>
+							<dict>
+								<key>enabled</key>
+								<string>1</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>B103DF9B1CAF4D4D007AE21C</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>TestTargetID</key>
+						<string>B103DF871CAF4D4D007AE21C</string>
+					</dict>
+					<key>B103DFA61CAF4D4D007AE21C</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>TestTargetID</key>
+						<string>B103DF871CAF4D4D007AE21C</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>B103DF831CAF4D4C007AE21C</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>B103DF7F1CAF4D4C007AE21C</string>
+			<key>productRefGroup</key>
+			<string>B103DF891CAF4D4D007AE21C</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>B103DF871CAF4D4D007AE21C</string>
+				<string>B103DF9B1CAF4D4D007AE21C</string>
+				<string>B103DFA61CAF4D4D007AE21C</string>
+			</array>
+		</dict>
+		<key>B103DF831CAF4D4C007AE21C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>B103DFAE1CAF4D4D007AE21C</string>
+				<string>B103DFAF1CAF4D4D007AE21C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>B103DF841CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B103DF8E1CAF4D4D007AE21C</string>
+				<string>B103DF8C1CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B103DF851CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B13246791CB039D900440DF4</string>
+				<string>F99063AC00F9EE234EB12D88</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B103DF861CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B103DF961CAF4D4D007AE21C</string>
+				<string>B103DF931CAF4D4D007AE21C</string>
+				<string>B103DF911CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B103DF871CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>B103DFB01CAF4D4D007AE21C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>DAA30150FFC4948A6F34DAE1</string>
+				<string>B103DF841CAF4D4D007AE21C</string>
+				<string>B103DF851CAF4D4D007AE21C</string>
+				<string>B103DF861CAF4D4D007AE21C</string>
+				<string>86F20A726FC37796611C1EA4</string>
+				<string>CE6571BE5F364D955DC1F533</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>RotaMap</string>
+			<key>productName</key>
+			<string>RotaMap</string>
+			<key>productReference</key>
+			<string>B103DF881CAF4D4D007AE21C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>B103DF881CAF4D4D007AE21C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>RotaMap.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>B103DF891CAF4D4D007AE21C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B103DF881CAF4D4D007AE21C</string>
+				<string>B103DF9C1CAF4D4D007AE21C</string>
+				<string>B103DFA71CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DF8A1CAF4D4D007AE21C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B132468C1CB03E7300440DF4</string>
+				<string>B132468D1CB03E7300440DF4</string>
+				<string>B132468E1CB03E7300440DF4</string>
+				<string>B132468F1CB03E7300440DF4</string>
+				<string>B13246901CB03E7300440DF4</string>
+				<string>B13246911CB03E7300440DF4</string>
+				<string>B13246921CB03E7300440DF4</string>
+				<string>B13246931CB03E7300440DF4</string>
+				<string>B103DF8B1CAF4D4D007AE21C</string>
+				<string>B103DF921CAF4D4D007AE21C</string>
+				<string>B103DF971CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>RotaMap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DF8B1CAF4D4D007AE21C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DF8C1CAF4D4D007AE21C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B103DF8B1CAF4D4D007AE21C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B103DF8D1CAF4D4D007AE21C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>ViewController.swift</string>
+			<key>path</key>
+			<string>../ViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DF8E1CAF4D4D007AE21C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B103DF8D1CAF4D4D007AE21C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B103DF8F1CAF4D4D007AE21C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B103DF901CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>path</key>
+			<string>..</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DF901CAF4D4D007AE21C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DF911CAF4D4D007AE21C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B103DF8F1CAF4D4D007AE21C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B103DF921CAF4D4D007AE21C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DF931CAF4D4D007AE21C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B103DF921CAF4D4D007AE21C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B103DF941CAF4D4D007AE21C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B103DF951CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>path</key>
+			<string>..</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DF951CAF4D4D007AE21C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DF961CAF4D4D007AE21C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B103DF941CAF4D4D007AE21C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B103DF971CAF4D4D007AE21C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DF981CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B103DFA11CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B103DF991CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B103DF9A1CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B103DF9B1CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>B103DFB31CAF4D4D007AE21C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>B103DF981CAF4D4D007AE21C</string>
+				<string>B103DF991CAF4D4D007AE21C</string>
+				<string>B103DF9A1CAF4D4D007AE21C</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>B103DF9E1CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>RotaMapTests</string>
+			<key>productName</key>
+			<string>RotaMapTests</string>
+			<key>productReference</key>
+			<string>B103DF9C1CAF4D4D007AE21C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>B103DF9C1CAF4D4D007AE21C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>RotaMapTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>B103DF9D1CAF4D4D007AE21C</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>B103DF801CAF4D4C007AE21C</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>B103DF871CAF4D4D007AE21C</string>
+			<key>remoteInfo</key>
+			<string>RotaMap</string>
+		</dict>
+		<key>B103DF9E1CAF4D4D007AE21C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>B103DF871CAF4D4D007AE21C</string>
+			<key>targetProxy</key>
+			<string>B103DF9D1CAF4D4D007AE21C</string>
+		</dict>
+		<key>B103DF9F1CAF4D4D007AE21C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B103DFA01CAF4D4D007AE21C</string>
+				<string>B103DFA21CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>RotaMapTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DFA01CAF4D4D007AE21C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RotaMapTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DFA11CAF4D4D007AE21C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B103DFA01CAF4D4D007AE21C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B103DFA21CAF4D4D007AE21C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DFA31CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B103DFAC1CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B103DFA41CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B103DFA51CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B103DFA61CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>B103DFB61CAF4D4D007AE21C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>B103DFA31CAF4D4D007AE21C</string>
+				<string>B103DFA41CAF4D4D007AE21C</string>
+				<string>B103DFA51CAF4D4D007AE21C</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>B103DFA91CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>RotaMapUITests</string>
+			<key>productName</key>
+			<string>RotaMapUITests</string>
+			<key>productReference</key>
+			<string>B103DFA71CAF4D4D007AE21C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.ui-testing</string>
+		</dict>
+		<key>B103DFA71CAF4D4D007AE21C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>RotaMapUITests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>B103DFA81CAF4D4D007AE21C</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>B103DF801CAF4D4C007AE21C</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>B103DF871CAF4D4D007AE21C</string>
+			<key>remoteInfo</key>
+			<string>RotaMap</string>
+		</dict>
+		<key>B103DFA91CAF4D4D007AE21C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>B103DF871CAF4D4D007AE21C</string>
+			<key>targetProxy</key>
+			<string>B103DFA81CAF4D4D007AE21C</string>
+		</dict>
+		<key>B103DFAA1CAF4D4D007AE21C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B103DFAB1CAF4D4D007AE21C</string>
+				<string>B103DFAD1CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>RotaMapUITests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DFAB1CAF4D4D007AE21C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RotaMapUITests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DFAC1CAF4D4D007AE21C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B103DFAB1CAF4D4D007AE21C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B103DFAD1CAF4D4D007AE21C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B103DFAE1CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>B103DFAF1CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>B103DFB01CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>B103DFB11CAF4D4D007AE21C</string>
+				<string>B103DFB21CAF4D4D007AE21C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>B103DFB11CAF4D4D007AE21C</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1F7C2DF5AB0D61DCA2A37AAC</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>INFOPLIST_FILE</key>
+				<string>RotaMap/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.br.RotaMap</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>B103DFB21CAF4D4D007AE21C</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>9D74F880DD2B504BF7C8EC19</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>INFOPLIST_FILE</key>
+				<string>RotaMap/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.br.RotaMap</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>B103DFB31CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>B103DFB41CAF4D4D007AE21C</string>
+				<string>B103DFB51CAF4D4D007AE21C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>B103DFB41CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>RotaMapTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.br.RotaMapTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/RotaMap.app/RotaMap</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>B103DFB51CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>RotaMapTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.br.RotaMapTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/RotaMap.app/RotaMap</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>B103DFB61CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>B103DFB71CAF4D4D007AE21C</string>
+				<string>B103DFB81CAF4D4D007AE21C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>B103DFB71CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>RotaMapUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.br.RotaMapUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>RotaMap</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>B103DFB81CAF4D4D007AE21C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>RotaMapUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.br.RotaMapUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>RotaMap</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>B13246781CB039D900440DF4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>MapKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/MapKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>B13246791CB039D900440DF4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B13246781CB039D900440DF4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B132468C1CB03E7300440DF4</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Cells</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B132468D1CB03E7300440DF4</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Constantes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B132468E1CB03E7300440DF4</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Models</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B132468F1CB03E7300440DF4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B103DF8F1CAF4D4D007AE21C</string>
+				<string>B103DF941CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B13246901CB03E7300440DF4</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TableViews</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B13246911CB03E7300440DF4</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Utils</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B13246921CB03E7300440DF4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B103DF8D1CAF4D4D007AE21C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ViewControlles</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B13246931CB03E7300440DF4</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>WS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CE6571BE5F364D955DC1F533</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-RotaMap/Pods-RotaMap-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>DAA30150FFC4948A6F34DAE1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>F99063AC00F9EE234EB12D88</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5C888123B79ACF7C7E6210A8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>B103DF801CAF4D4C007AE21C</string>
+</dict>
+</plist>
