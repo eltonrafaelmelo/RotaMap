@@ -24,6 +24,10 @@
 		B17DC5621CB1C4CA00FE6B9B /* HomeToWorkRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17DC5611CB1C4CA00FE6B9B /* HomeToWorkRecurrence.swift */; };
 		B17DC5641CB1C71900FE6B9B /* WorkToHomeRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17DC5631CB1C71900FE6B9B /* WorkToHomeRecurrence.swift */; };
 		B17DC5661CB1CB9C00FE6B9B /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17DC5651CB1CB9C00FE6B9B /* Ride.swift */; };
+		B17DC5681CB32A4D00FE6B9B /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17DC5671CB32A4D00FE6B9B /* Rest.swift */; };
+		B17DC56A1CB336CA00FE6B9B /* RouteSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17DC5691CB336CA00FE6B9B /* RouteSuggestions.swift */; };
+		B17DC56C1CB3378600FE6B9B /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17DC56B1CB3378600FE6B9B /* Params.swift */; };
+		B17DC56E1CB3420E00FE6B9B /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17DC56D1CB3420E00FE6B9B /* Routes.swift */; };
 		F99063AC00F9EE234EB12D88 /* Pods_RotaMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C888123B79ACF7C7E6210A8 /* Pods_RotaMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +75,10 @@
 		B17DC5611CB1C4CA00FE6B9B /* HomeToWorkRecurrence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeToWorkRecurrence.swift; sourceTree = "<group>"; };
 		B17DC5631CB1C71900FE6B9B /* WorkToHomeRecurrence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkToHomeRecurrence.swift; sourceTree = "<group>"; };
 		B17DC5651CB1CB9C00FE6B9B /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		B17DC5671CB32A4D00FE6B9B /* Rest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
+		B17DC5691CB336CA00FE6B9B /* RouteSuggestions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSuggestions.swift; sourceTree = "<group>"; };
+		B17DC56B1CB3378600FE6B9B /* Params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
+		B17DC56D1CB3420E00FE6B9B /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,15 +201,18 @@
 		B132468E1CB03E7300440DF4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B17DC5551CB1B95000FE6B9B /* TOAutenticacao.swift */,
 				B17DC5571CB1BA3600FE6B9B /* Autenticacao.swift */,
-				B17DC5591CB1BB8A00FE6B9B /* User.swift */,
-				B17DC55B1CB1C09500FE6B9B /* Photo.swift */,
 				B17DC55D1CB1C33200FE6B9B /* HomeAddress.swift */,
-				B17DC55F1CB1C42900FE6B9B /* WorkAddress.swift */,
 				B17DC5611CB1C4CA00FE6B9B /* HomeToWorkRecurrence.swift */,
-				B17DC5631CB1C71900FE6B9B /* WorkToHomeRecurrence.swift */,
+				B17DC56B1CB3378600FE6B9B /* Params.swift */,
+				B17DC55B1CB1C09500FE6B9B /* Photo.swift */,
 				B17DC5651CB1CB9C00FE6B9B /* Ride.swift */,
+				B17DC5691CB336CA00FE6B9B /* RouteSuggestions.swift */,
+				B17DC5551CB1B95000FE6B9B /* TOAutenticacao.swift */,
+				B17DC5591CB1BB8A00FE6B9B /* User.swift */,
+				B17DC55F1CB1C42900FE6B9B /* WorkAddress.swift */,
+				B17DC5631CB1C71900FE6B9B /* WorkToHomeRecurrence.swift */,
+				B17DC56D1CB3420E00FE6B9B /* Routes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -240,6 +251,7 @@
 		B13246931CB03E7300440DF4 /* WS */ = {
 			isa = PBXGroup;
 			children = (
+				B17DC5671CB32A4D00FE6B9B /* Rest.swift */,
 			);
 			path = WS;
 			sourceTree = "<group>";
@@ -432,10 +444,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B17DC55C1CB1C09500FE6B9B /* Photo.swift in Sources */,
+				B17DC56C1CB3378600FE6B9B /* Params.swift in Sources */,
 				B103DF8E1CAF4D4D007AE21C /* ViewController.swift in Sources */,
 				B17DC5621CB1C4CA00FE6B9B /* HomeToWorkRecurrence.swift in Sources */,
+				B17DC5681CB32A4D00FE6B9B /* Rest.swift in Sources */,
 				B17DC5561CB1B95000FE6B9B /* TOAutenticacao.swift in Sources */,
 				B17DC5581CB1BA3600FE6B9B /* Autenticacao.swift in Sources */,
+				B17DC56E1CB3420E00FE6B9B /* Routes.swift in Sources */,
+				B17DC56A1CB336CA00FE6B9B /* RouteSuggestions.swift in Sources */,
 				B17DC5661CB1CB9C00FE6B9B /* Ride.swift in Sources */,
 				B17DC55A1CB1BB8A00FE6B9B /* User.swift in Sources */,
 				B17DC5641CB1C71900FE6B9B /* WorkToHomeRecurrence.swift in Sources */,

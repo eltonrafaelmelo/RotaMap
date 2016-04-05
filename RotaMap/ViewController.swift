@@ -21,6 +21,9 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var search: UISearchBar!
     
+    var autenticacao = TOAutenticacao()
+    var routes = RouteSuggestions()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,9 +47,11 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
         self.mapRota.addAnnotations([destinoRota])
         
         
-        routeMap()
+//        routeMap()
         
         mapRota.showAnnotations([origemRota ,destinoRota], animated: true)
+        
+        getAutenticacao()
         
     }
     
@@ -157,6 +162,45 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
         
     }
     
+    func getAutenticacao() {
+        Rest.getAuthentication() {authentication, error in
+            
+//            self.util.hideActivityIndicator()
+            
+            if let _ = error {
+                
+//                self.util.showMessage(self, message: "\(error)")
+                
+            } else {
+                
+                self.autenticacao = authentication!
+                
+                let listT = self.autenticacao
+                
+                self.postRoutes()
+            
+            }
+        }
+    }
+    
+    func postRoutes() {
+        Rest.postRoutes(autenticacao.data.user) {routeSuggestions, error in
+            
+            //            self.util.hideActivityIndicator()
+            
+            if let _ = error {
+                
+                //                self.util.showMessage(self, message: "\(error)")
+                
+            } else {
+                
+                 self.routes = routeSuggestions!
+                
+                let listT = self.routes
+                
+            }
+        }
+    }
     
 }
 
