@@ -1,10 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kAI-M7-aHA">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="X0b-kg-oyh">
+            <objects>
+                <navigationController id="kAI-M7-aHA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oqU-Re-MY5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uCY-X7-ad9" kind="relationship" relationship="rootViewController" id="o7z-h3-KsK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w1m-N5-ulW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252" y="-401"/>
+        </scene>
+        <!--Route View Controller-->
+        <scene sceneID="JZy-O7-gjM">
+            <objects>
+                <viewController storyboardIdentifier="RouteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uCY-X7-ad9" customClass="RouteViewController" customModule="RotaMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oTB-Jz-6f2"/>
+                        <viewControllerLayoutGuide type="bottom" id="M1b-or-kD7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g7C-dL-zGm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hw-7X-qPf" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.1183279668" green="1" blue="0.667281495" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6hw-7X-qPf" firstAttribute="leading" secondItem="g7C-dL-zGm" secondAttribute="leadingMargin" constant="-20" id="2U5-WY-ANs"/>
+                            <constraint firstItem="6hw-7X-qPf" firstAttribute="top" secondItem="oTB-Jz-6f2" secondAttribute="bottom" id="Wdo-un-l0P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6hw-7X-qPf" secondAttribute="trailing" constant="-20" id="YAY-tM-oJv"/>
+                            <constraint firstItem="M1b-or-kD7" firstAttribute="top" secondItem="6hw-7X-qPf" secondAttribute="bottom" id="bt5-T0-WPm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="35H-i7-AbJ"/>
+                    <connections>
+                        <outlet property="mapView" destination="6hw-7X-qPf" id="5uu-Xy-2Ic"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWd-LS-WMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="-405"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
