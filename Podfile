@@ -9,7 +9,7 @@ target 'RotaMap' do
     pod 'JLToast', '~> 1.3'
     pod 'ReachabilitySwift', git: 'https://github.com/ashleymills/Reachability.swift'
     pod 'SwiftLoader'
-
+    pod 'GoogleMaps'
 end
 
 target 'RotaMapTests' do
