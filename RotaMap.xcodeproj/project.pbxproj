@@ -31,6 +31,8 @@
 		B17DC56A1CB336CA00FE6B9B /* RouteSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17DC5691CB336CA00FE6B9B /* RouteSuggestions.swift */; };
 		B17DC56C1CB3378600FE6B9B /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17DC56B1CB3378600FE6B9B /* Params.swift */; };
 		B17DC56E1CB3420E00FE6B9B /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17DC56D1CB3420E00FE6B9B /* Routes.swift */; };
+		B1D0CA491CBADE7B00B2D51F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0CA481CBADE7B00B2D51F /* Constant.swift */; };
+		B1D0CA4B1CBAE3EA00B2D51F /* UtilNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0CA4A1CBAE3EA00B2D51F /* UtilNetwork.swift */; };
 		F99063AC00F9EE234EB12D88 /* Pods_RotaMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C888123B79ACF7C7E6210A8 /* Pods_RotaMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +87,8 @@
 		B17DC5691CB336CA00FE6B9B /* RouteSuggestions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSuggestions.swift; sourceTree = "<group>"; };
 		B17DC56B1CB3378600FE6B9B /* Params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
 		B17DC56D1CB3420E00FE6B9B /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		B1D0CA481CBADE7B00B2D51F /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B1D0CA4A1CBAE3EA00B2D51F /* UtilNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UtilNetwork.swift; path = RotaMap/Constantes/UtilNetwork.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,13 +138,13 @@
 		B103DF7F1CAF4D4C007AE21C = {
 			isa = PBXGroup;
 			children = (
+				2222CB20D22DF3BD2AA49AB4 /* Frameworks */,
 				B13246781CB039D900440DF4 /* MapKit.framework */,
+				4E6C27A083302AB00EB1FA10 /* Pods */,
+				B103DF891CAF4D4D007AE21C /* Products */,
 				B103DF8A1CAF4D4D007AE21C /* RotaMap */,
 				B103DF9F1CAF4D4D007AE21C /* RotaMapTests */,
 				B103DFAA1CAF4D4D007AE21C /* RotaMapUITests */,
-				B103DF891CAF4D4D007AE21C /* Products */,
-				4E6C27A083302AB00EB1FA10 /* Pods */,
-				2222CB20D22DF3BD2AA49AB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,6 +204,7 @@
 		B132468D1CB03E7300440DF4 /* Constantes */ = {
 			isa = PBXGroup;
 			children = (
+				B1D0CA481CBADE7B00B2D51F /* Constant.swift */,
 			);
 			path = Constantes;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			children = (
 				B10C03BD1CB88C5F001FE9CA /* RouteMap.swift */,
 				B11A31A91CB99D6C003F78CA /* Util.swift */,
+				B1D0CA4A1CBAE3EA00B2D51F /* UtilNetwork.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -460,6 +466,7 @@
 				B17DC5681CB32A4D00FE6B9B /* Rest.swift in Sources */,
 				B17DC5561CB1B95000FE6B9B /* TOAutenticacao.swift in Sources */,
 				B10C03BE1CB88C5F001FE9CA /* RouteMap.swift in Sources */,
+				B1D0CA491CBADE7B00B2D51F /* Constant.swift in Sources */,
 				B17DC5581CB1BA3600FE6B9B /* Autenticacao.swift in Sources */,
 				B17DC56E1CB3420E00FE6B9B /* Routes.swift in Sources */,
 				B17DC56A1CB336CA00FE6B9B /* RouteSuggestions.swift in Sources */,
@@ -467,6 +474,7 @@
 				B17DC55A1CB1BB8A00FE6B9B /* User.swift in Sources */,
 				B17DC5641CB1C71900FE6B9B /* WorkToHomeRecurrence.swift in Sources */,
 				B17DC5601CB1C42900FE6B9B /* WorkAddress.swift in Sources */,
+				B1D0CA4B1CBAE3EA00B2D51F /* UtilNetwork.swift in Sources */,
 				B103DF8C1CAF4D4D007AE21C /* AppDelegate.swift in Sources */,
 				B10C03BA1CB88A1B001FE9CA /* ViewController.swift in Sources */,
 				B17DC55E1CB1C33200FE6B9B /* HomeAddress.swift in Sources */,

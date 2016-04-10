@@ -23,8 +23,7 @@ class Rest {
             "Authorization": "\(credential)"
         ]
         
-        let urlFinal = "http://bynd-urbbox.herokuapp.com/rest/auth"
-        Alamofire.request(.GET, urlFinal, parameters: nil, headers: header)
+        Alamofire.request(.GET, Constant.URL_AUTH, parameters: nil, headers: header)
             .responseObject { (response: TOAutenticacao?, error: ErrorType?) in
                 completionHandler(authentication: response as TOAutenticacao?, error: error)
         }
@@ -52,8 +51,7 @@ class Rest {
                 "date": "01/04/2016"
         ]
         
-        let urlFinal = "http://bynd-urbbox.herokuapp.com/rest/routes/generic/suggestions"
-        Alamofire.request(.POST, urlFinal, parameters: parameters, headers: header, encoding: .JSON)
+        Alamofire.request(.POST, Constant.URL_POST_ROUTES, parameters: parameters, headers: header, encoding: .JSON)
             .responseObject { (response: RouteSuggestions?, error: ErrorType?) in
                 completionHandler(routeSuggestions: response as RouteSuggestions?, error: error)
         }

@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import JLToast
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         GMSServices.provideAPIKey("AIzaSyC_A562M2DVBHrE7XdJHlcutAHm3BwHjek")
+        setsBackgroundOfColorNavigationBar()
+        setsBackgroundOfColorButtonNavigationBar()
+        setsStyleTitleNavigationBar()
+        configureToast()
         return true
+    }
+    
+    //MARK: - BackgroundOfColorNavigationBar
+    func setsBackgroundOfColorNavigationBar() {
+        UINavigationBar.appearance().barTintColor = UIColor(red:0.28, green:0.74, blue:0.78, alpha:1.00)
+    }
+    
+    func setsBackgroundOfColorButtonNavigationBar() {
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+    }
+    
+    func setsStyleTitleNavigationBar(){
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:UIFont(name: "HelveticaNeue-Light", size: 17)!]
+    }
+    
+    func configureToast(){
+        JLToastView.setDefaultValue(
+            120,
+            forAttributeName: JLToastViewPortraitOffsetYAttributeName,
+            userInterfaceIdiom: .Phone
+        )
     }
 
     func applicationWillResignActive(application: UIApplication) {

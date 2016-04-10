@@ -11,7 +11,7 @@ import CoreLocation
 
 class RouteMap: NSObject {
     
-    let baseURLGeocode = "https://maps.googleapis.com/maps/api/geocode/json?"
+    let baseURLGeocode = Constant.URL_GEOCODE
     
     var lookupAddressResults: Dictionary<NSObject, AnyObject>!
     
@@ -21,7 +21,7 @@ class RouteMap: NSObject {
     
     var fetchedAddressLatitude: Double!
     
-    let baseURLDirections = "https://maps.googleapis.com/maps/api/directions/json?"
+    let baseURLDirections = Constant.URL_DIRECTIONS
     
     var selectedRoute: Dictionary<NSObject, AnyObject>!
     
@@ -75,13 +75,10 @@ class RouteMap: NSObject {
                         travelModeString = "driving"
                     }
                     
-                    
                     directionsURLString += "&mode=" + travelModeString
                 }
                 
-                //                directionsURLString = directionsURLString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())!
                 directionsURLString = directionsURLString.stringByAddingPercentEncodingWithAllowedCharacters( NSCharacterSet.URLQueryAllowedCharacterSet())!
-                
                 
                 let directionsURL = NSURL(string: directionsURLString)
                 
@@ -121,8 +118,6 @@ class RouteMap: NSObject {
                             
                         }
                         
-                        
-                        
                     } catch let error as NSError {
                         // failure
                         print("Fetch failed: \(error.localizedDescription)")
@@ -138,7 +133,6 @@ class RouteMap: NSObject {
         }
     }
     
-    
     func calculateTotalDistanceAndDuration() {
         let legs = self.selectedRoute["legs"] as! Array<Dictionary<NSObject, AnyObject>>
         
@@ -150,10 +144,8 @@ class RouteMap: NSObject {
             totalDurationInSeconds += (leg["duration"] as! Dictionary<NSObject, AnyObject>)["value"] as! UInt
         }
         
-        
         let distanceInKilometers: Double = Double(totalDistanceInMeters / 1000)
-        totalDistance = "Total Distance: \(distanceInKilometers) Km"
-        
+        totalDistance = "Total Distância: \(distanceInKilometers) Km"
         
         let mins = totalDurationInSeconds / 60
         let hours = mins / 60
@@ -162,8 +154,11 @@ class RouteMap: NSObject {
         let remainingMins = mins % 60
         let remainingSecs = totalDurationInSeconds % 60
         
-        totalDuration = "Duration: \(days) d, \(remainingHours) h, \(remainingMins) mins, \(remainingSecs) secs"
+        let hora = hours > 1 ? "horas" : "hora"
+        let dia = days > 1 ? "dias" : "dia"
+        let segundo = remainingSecs > 1 ? "segundos" : "segundo"
+
+        
+        totalDuration = "Duração: \(days) \(dia), \(remainingHours) \(hora), \(remainingMins) minutos, \(remainingSecs) \(segundo)"
     }
-    
-   
 }

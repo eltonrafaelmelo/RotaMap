@@ -85,6 +85,5 @@ class User: Mappable {
         spared_co2               <- map["spared_co2"]
         points                   <- map["points"]
         ride                     <- map["ride"]
-
     }
 }
