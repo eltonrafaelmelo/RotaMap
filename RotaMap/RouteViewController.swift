@@ -27,7 +27,9 @@ class RouteViewController: UIViewController, CLLocationManagerDelegate, GMSMapVi
     var markersArray: Array<GMSMarker> = []
     var originMarker: GMSMarker!
     var destinationMarker: GMSMarker!
-    
+    var util = Util.sharedInstance
+    var routes = RouteSuggestions()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Rotas"
@@ -44,13 +46,28 @@ class RouteViewController: UIViewController, CLLocationManagerDelegate, GMSMapVi
     
     //MARK: - get user
     func getAutenticacao() {
+        util.showActivityIndicator()
         Rest.getAuthentication() {authentication, error in
-            //            self.util.hideActivityIndicator()
+                        self.util.hideActivityIndicator()
             if let _ = error {
                 //                self.util.showMessage(self, message: "\(error)")
             } else {
                 self.autenticacao = authentication!
                 self.createRoute()
+            }
+        }
+    }
+    
+    //MARK: - POST routes
+    func postRoutes() {
+        util.showActivityIndicator()
+        Rest.postRoutes(autenticacao.data.user) {routeSuggestions, error in
+                        self.util.hideActivityIndicator()
+            if let _ = error {
+                //                self.util.showMessage(self, message: "\(error)")
+            } else {
+                self.routes = routeSuggestions!
+                self.treatingRoute()
             }
         }
     }
@@ -62,9 +79,6 @@ class RouteViewController: UIViewController, CLLocationManagerDelegate, GMSMapVi
                 self.clearRoute()
                 self.waypointsArray.removeAll(keepCapacity: false)
             }
-            
-            let origin = "Fortaleza"
-            let destination = "Fortaleza"
         
         let positionStringOrigin = String(format: "%f", autenticacao.data.user.home_address.homeLat) + "," + String(format: "%f", autenticacao.data.user.home_address.homeLng)
         let positionStringDestino = String(format: "%f", autenticacao.data.user.work_address.workLat) + "," + String(format: "%f", autenticacao.data.user.work_address.workLng)
@@ -73,15 +87,13 @@ class RouteViewController: UIViewController, CLLocationManagerDelegate, GMSMapVi
         
         let origem = CLLocationCoordinate2D(latitude: autenticacao.data.user.home_address.homeLat, longitude: autenticacao.data.user.home_address.homeLng)
         let destino = CLLocationCoordinate2D(latitude: autenticacao.data.user.work_address.workLat, longitude: autenticacao.data.user.work_address.workLng)
-
-        let bounds = GMSCoordinateBounds(coordinate: origem, coordinate: destino)
-        mapView.animateWithCameraUpdate(GMSCameraUpdate.fitBounds(bounds, withPadding: 50.0))
         
-//        let bounds = GMSCoordinateBounds(coordinate: origem, coordinate: destino)
-//        let camera = mapView.cameraForBounds(bounds, insets:UIEdgeInsetsZero)
-//        mapView.camera = camera!
-//        
-            self.mapRoute.getDirections(origin, destination: destination, waypoints: waypointsArray, travelMode: self.travelMode, completionHandler: { (status, success) -> Void in
+//        let camera = GMSCameraPosition.cameraWithLatitude(autenticacao.data.user.home_address.homeLat,
+//                                                          longitude:autenticacao.data.user.home_address.homeLng, zoom:13)
+//        mapView.camera = camera
+        mapView.animateWithCameraUpdate(GMSCameraUpdate.fitBounds(GMSCoordinateBounds(coordinate: origem, coordinate: destino)))
+//
+            self.mapRoute.getDirections(positionStringOrigin, destination: positionStringDestino, waypoints: waypointsArray, travelMode: self.travelMode, completionHandler: { (status, success) -> Void in
                 if success {
                     self.configureMapAndMarkersForRoute()
                     self.drawRoute()
@@ -111,7 +123,7 @@ class RouteViewController: UIViewController, CLLocationManagerDelegate, GMSMapVi
     }
     
     func configureMapAndMarkersForRoute() {
-        mapView.camera = GMSCameraPosition.cameraWithTarget(mapRoute.originCoordinate, zoom: 9.0)
+//        mapView.camera = GMSCameraPosition.cameraWithTarget(mapRoute.originCoordinate, zoom: 9.0)
         
         originMarker = GMSMarker(position: self.mapRoute.originCoordinate)
         originMarker.map = self.mapView
@@ -175,4 +187,39 @@ class RouteViewController: UIViewController, CLLocationManagerDelegate, GMSMapVi
         }
     }
     
+    @IBAction func touchButtonAlert(sender: AnyObject) {
+        util.showMessage(self, message: "Escolha a opção", actionList: actionAlert())
+    }
+    
+    func actionAlert() -> [UIAlertAction] {
+        var listAlerts = [UIAlertAction]()
+        let SolicitarRotasAction = UIAlertAction(title: "Solicitar sugestões de rotas", style: .Default) { (action) in
+            self.postRoutes()
+        }
+        
+        let liparRotasAction = UIAlertAction(title: "Lipar rotas", style: .Default) { (action) in
+            self.createRoute()
+        }
+        listAlerts.append(SolicitarRotasAction)
+        listAlerts.append(liparRotasAction)
+        return listAlerts
+    }
+    
+    //MARK: - treating route
+    func treatingRoute() {
+        var conta = 1
+        for route in routes.data {
+            
+            let positionStringOrigin = String(format: "%f", route.start_lat) + "," + String(format: "%f", route.start_lng)
+            let positionStringDestino = String(format: "%f", route.end_lat) + "," + String(format: "%f", route.end_lng)
+            
+            if  conta <= 3 {
+                waypointsArray.append(positionStringOrigin)
+                waypointsArray.append(positionStringDestino)
+                conta = conta + 1
+            }
+        }
+        
+        recreateRoute()
+    }
 }

@@ -47,7 +47,13 @@
                             <constraint firstItem="M1b-or-kD7" firstAttribute="top" secondItem="6hw-7X-qPf" secondAttribute="bottom" id="bt5-T0-WPm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="35H-i7-AbJ"/>
+                    <navigationItem key="navigationItem" id="35H-i7-AbJ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="6Ix-SA-D9h">
+                            <connections>
+                                <action selector="touchButtonAlert:" destination="uCY-X7-ad9" id="ebR-0m-Nj4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="6hw-7X-qPf" id="5uu-Xy-2Ic"/>
                     </connections>

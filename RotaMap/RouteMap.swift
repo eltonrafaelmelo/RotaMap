@@ -78,11 +78,11 @@ class RouteMap: NSObject {
                     
                     directionsURLString += "&mode=" + travelModeString
                 }
-
-//                directionsURLString = directionsURLString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())!
-                 directionsURLString = directionsURLString.stringByAddingPercentEncodingWithAllowedCharacters( NSCharacterSet.URLQueryAllowedCharacterSet())!
-
-
+                
+                //                directionsURLString = directionsURLString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())!
+                directionsURLString = directionsURLString.stringByAddingPercentEncodingWithAllowedCharacters( NSCharacterSet.URLQueryAllowedCharacterSet())!
+                
+                
                 let directionsURL = NSURL(string: directionsURLString)
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -118,7 +118,7 @@ class RouteMap: NSObject {
                             else {
                                 completionHandler(status: status, success: false)
                             }
-
+                            
                         }
                         
                         
@@ -164,4 +164,6 @@ class RouteMap: NSObject {
         
         totalDuration = "Duration: \(days) d, \(remainingHours) h, \(remainingMins) mins, \(remainingSecs) secs"
     }
+    
+   
 }

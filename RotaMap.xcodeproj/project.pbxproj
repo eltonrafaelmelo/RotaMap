@@ -16,6 +16,7 @@
 		B10C03BA1CB88A1B001FE9CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10C03B91CB88A1B001FE9CA /* ViewController.swift */; };
 		B10C03BC1CB88B7F001FE9CA /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10C03BB1CB88B7F001FE9CA /* RouteViewController.swift */; };
 		B10C03BE1CB88C5F001FE9CA /* RouteMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10C03BD1CB88C5F001FE9CA /* RouteMap.swift */; };
+		B11A31AA1CB99D6C003F78CA /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A31A91CB99D6C003F78CA /* Util.swift */; };
 		B13246791CB039D900440DF4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B13246781CB039D900440DF4 /* MapKit.framework */; };
 		B17DC5561CB1B95000FE6B9B /* TOAutenticacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17DC5551CB1B95000FE6B9B /* TOAutenticacao.swift */; };
 		B17DC5581CB1BA3600FE6B9B /* Autenticacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17DC5571CB1BA3600FE6B9B /* Autenticacao.swift */; };
@@ -69,6 +70,7 @@
 		B10C03B91CB88A1B001FE9CA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = RotaMap/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		B10C03BB1CB88B7F001FE9CA /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouteViewController.swift; path = RotaMap/RouteViewController.swift; sourceTree = SOURCE_ROOT; };
 		B10C03BD1CB88C5F001FE9CA /* RouteMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouteMap.swift; path = RotaMap/RouteMap.swift; sourceTree = SOURCE_ROOT; };
+		B11A31A91CB99D6C003F78CA /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Util.swift; path = RotaMap/Util.swift; sourceTree = SOURCE_ROOT; };
 		B13246781CB039D900440DF4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B17DC5551CB1B95000FE6B9B /* TOAutenticacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOAutenticacao.swift; sourceTree = "<group>"; };
 		B17DC5571CB1BA3600FE6B9B /* Autenticacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autenticacao.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				B10C03BD1CB88C5F001FE9CA /* RouteMap.swift */,
+				B11A31A91CB99D6C003F78CA /* Util.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B17DC55C1CB1C09500FE6B9B /* Photo.swift in Sources */,
+				B11A31AA1CB99D6C003F78CA /* Util.swift in Sources */,
 				B17DC56C1CB3378600FE6B9B /* Params.swift in Sources */,
 				B10C03BC1CB88B7F001FE9CA /* RouteViewController.swift in Sources */,
 				B17DC5621CB1C4CA00FE6B9B /* HomeToWorkRecurrence.swift in Sources */,
