@@ -112,6 +112,7 @@ class RouteViewController: UIViewController, CLLocationManagerDelegate, GMSMapVi
             }
             else {
                 print(status)
+                JLToast.makeText("\(status)").show()
             }
         })
     }
@@ -181,6 +182,7 @@ class RouteViewController: UIViewController, CLLocationManagerDelegate, GMSMapVi
                 }
                 else {
                     print(status)
+                    JLToast.makeText("\(status)").show()
                 }
             })
         }
